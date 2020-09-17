@@ -7,14 +7,10 @@ from dotenv import load_dotenv
 
 app = flask.Flask(__name__)
 
-dotenv_path = join(dirname(__file__), 'tweepy.env')
-load_dotenv(dotenv_path)
-
-
-consumer_key = os.environ['KEY']
-consumer_secret = os.environ['KEY_SECRET']
-access_token = os.environ['TOKEN']
-access_token_secret = os.environ['TOKEN_SECRET']
+consumer_key = os.getenv("KEY")
+consumer_secret = os.getenv("KEY_SECRET")
+access_token = os.getenv("TOKEN")
+access_token_secret = os.getenv("TOKEN_SECRET")
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -23,7 +19,6 @@ api = tweepy.API(auth)
 account = "taylorswift13"
 
 @app.route('/')
-
 def index():
 
     user = api.get_user(account)
