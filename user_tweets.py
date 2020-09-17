@@ -2,24 +2,26 @@ import tweepy
 import os
 import datetime
 import flask
+from os.path import join, dirname
+from dotenv import load_dotenv
 
 app = flask.Flask(__name__)
 
-consumer_key = os.getenv("KEY")
-print(consumer_key)
-consumer_secret = os.getenv("KEY_SECRET")
-print(consumer_secret)
-access_token = os.getenv("TOKEN")
-print(access_token)
-access_token_secret = os.getenv("TOKEN_SECRET")
-print(access_token_secret)
+dotenv_path = join(dirname(__file__), 'tweepy.env')
+load_dotenv(dotenv_path)
+
+
+consumer_key = os.environ['KEY']
+consumer_secret = os.environ['KEY_SECRET']
+access_token = os.environ['TOKEN']
+access_token_secret = os.environ['TOKEN_SECRET']
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 account = "taylorswift13"
- 
+
 @app.route('/')
 
 def index():
@@ -57,4 +59,4 @@ def index():
 app.run(
     port = int(os.getenv("PORT", 8080)),   
     host = os.getenv("IP", "0.0.0.0")
-)        
+)
