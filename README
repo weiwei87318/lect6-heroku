@@ -26,4 +26,3 @@ TOKEN_SECRET='TODO'
 8. Install python-dotenv using the same process as above ([sudo] pip[3] install python-dotenv)
 9. Run `python user_tweets.py`
 10. If on Cloud9, preview templates/index.html
-11. 
