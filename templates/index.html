@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Artist's Tweets</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat Brush">
+        <link rel="stylesheet" href={{ url_for("static", filename="style2.css") }} >
+    </head>
+    <body>
+        
+        <h1>Tweets of {{ user_name }}</h1>
+        <h3 id="description">@{{ screen_name }} "{{ description }}"</h3>
+        
+        <ol>
+            {% for i in range(0, list_len) %}
+                <li>{{ tweet_list[i] }} <br> {{ tweet_time[i] }}</li>
+                <hr>
+            {% endfor %}
+        </ol>
+    </body>
+</html>

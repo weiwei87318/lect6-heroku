@@ -1,0 +1,17 @@
+body{
+    font-family: "Caveat Brush";
+    font-size: 28px;
+    background-color: Lightpink;
+    text-align: center;
+}
+
+#description{
+    font-size: 25px;
+}
+
+ol{ 
+    font-size: 18px;
+    background-color: PaleVioletRed;
+    font-family: cursive;
+    text-align: left;
+}

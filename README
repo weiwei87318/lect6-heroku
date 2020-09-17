@@ -1,0 +1,27 @@
+Most of this code was shamelessly taken from Binarynelle Sune's HW5 submission!
+Thanks for letting me clone the code and use it myself :)
+
+This is a simple demo of Heroku using the Twitter API.
+
+To use this repository, you must follow these steps:
+0. Sign up for the twitter developer portal at https://developer.twitter.com
+1. Navigate to https://twitter.com/en/projects-and-apps and make a new app.
+2. Click on the key symbol after creating your project, and it will take you to your keys and tokens.
+3. Clone this repository by using git clone http://www.github.com/Sresht/lect6-heroku
+4. In your local copy of this repository, create a new root-level file called tweepy.env
+5. Add the following line in tweepy.env, and then save tweepy.env
+
+KEY='TODO'
+KEY_SECRET='TODO'
+TOKEN='TODO'
+TOKEN_SECRET='TODO'
+
+6. Run the following in your terminal:
+    sudo pip install tweepy
+    (or) sudo pip3 install tweepy
+    (or) pip install tweepy
+    (or) pip3 install tweepy
+7. Install flask using the same process as above ([sudo] pip[3] install flask)
+8. Install python-dotenv using the same process as above ([sudo] pip[3] install python-dotenv)
+9. Run `python user_tweets.py`
+10. If on Cloud9, preview index.html
