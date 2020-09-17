@@ -9,16 +9,29 @@ To use this repository, you must follow these steps:
 2. Click on the key symbol after creating your project, and it will take you to your keys and tokens.
     If needed, you can regenerate your access token and secret.
 3. Clone this repository by using git clone http://www.github.com/Sresht/lect6-heroku-complete
-6. Run the following in your terminal:
+4. Run the following in your terminal:
     sudo pip install tweepy
     (or) sudo pip3 install tweepy
     (or) pip install tweepy
     (or) pip3 install tweepy
-7. Install flask using the same process as above ([sudo] pip[3] install flask)
-8. Install python-dotenv using the same process as above ([sudo] pip[3] install python-dotenv)
-9. Run `python user_tweets.py`
-10. If on Cloud9, preview templates/index.html
-11. Sign up for heroku at heroku.com 
-11. Install heroku by running npm install -g heroku
-12. TODO Add heroku keys
-13. TODO git push/heroku push
+5. Install flask using the same process as above ([sudo] pip[3] install flask)
+6. Install python-dotenv using the same process as above ([sudo] pip[3] install python-dotenv)
+7. Run `python user_tweets.py`
+8. If on Cloud9, preview templates/index.html
+9. Sign up for heroku at heroku.com 
+10. Install heroku by running npm install -g heroku
+11. Add your secret keys (from step 2) by going to https://dashboard.heroku.com/apps
+    and clicking into your app. Click on Settings, then scroll to "Config Vars." Click
+    "Reveal Config Vars" and add the key value pairs for each variable in user_tweets.py
+    Your config var key names should be:
+    KEY
+    KEY_SECRET
+    TOKEN
+    TOKEN_SECRET
+12. After adding these changes, make a new git repository and go through the following steps:
+    git branch -M master
+    git remote add origin [.git link to your new repository]
+    git push -u origin master
+    git push heroku master
+13. Navigate to your newly-created heroku site!
+14. If this does not load correctly, you can debug by running `heroku logs --tail` in the console.
