@@ -6,9 +6,13 @@ import flask
 app = flask.Flask(__name__)
 
 consumer_key = os.getenv("KEY")
+print(consumer_key)
 consumer_secret = os.getenv("KEY_SECRET")
+print(consumer_secret)
 access_token = os.getenv("TOKEN")
+print(access_token)
 access_token_secret = os.getenv("TOKEN_SECRET")
+print(access_token_secret)
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
