@@ -8,15 +8,7 @@ To use this repository, you must follow these steps:
 1. Navigate to https://developer.twitter.com/en/portal/projects-and-apps and make a new app.
 2. Click on the key symbol after creating your project, and it will take you to your keys and tokens.
     If needed, you can regenerate your access token and secret.
-3. Clone this repository by using git clone http://www.github.com/Sresht/lect6-heroku
-4. In your local copy of this repository, create a new root-level file called tweepy.env
-5. Add the following line in tweepy.env, and then save tweepy.env
-
-KEY='TODO'
-KEY_SECRET='TODO'
-TOKEN='TODO'
-TOKEN_SECRET='TODO'
-
+3. Clone this repository by using git clone http://www.github.com/Sresht/lect6-heroku-complete
 6. Run the following in your terminal:
     sudo pip install tweepy
     (or) sudo pip3 install tweepy
@@ -26,3 +18,7 @@ TOKEN_SECRET='TODO'
 8. Install python-dotenv using the same process as above ([sudo] pip[3] install python-dotenv)
 9. Run `python user_tweets.py`
 10. If on Cloud9, preview templates/index.html
+11. Sign up for heroku at heroku.com 
+11. Install heroku by running npm install -g heroku
+12. TODO Add heroku keys
+13. TODO git push/heroku push
