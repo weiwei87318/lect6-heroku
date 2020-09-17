@@ -6,16 +6,16 @@ import flask
 app = flask.Flask(__name__)
 
 consumer_key = os.getenv("KEY")
-consumer_secret = os.getenv('KEY_SECRET')
-access_token = os.getenv('TOKEN')
-access_token_secret = os.getenv('TOKEN_SECRET')
+consumer_secret = os.getenv("KEY_SECRET")
+access_token = os.getenv("TOKEN")
+access_token_secret = os.getenv("TOKEN_SECRET")
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 account = "taylorswift13"
-
+ 
 @app.route('/')
 
 def index():
