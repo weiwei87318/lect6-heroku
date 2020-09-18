@@ -24,9 +24,9 @@ To use this repository, you must follow these steps:
     and clicking into your app. Click on Settings, then scroll to "Config Vars." Click
     "Reveal Config Vars" and add the key value pairs for each variable in user_tweets.py
     Your config var key names should be:
-    KEY
-    KEY_SECRET
-    TOKEN
+    KEY=
+    KEY_SECRET=
+    TOKEN=
     TOKEN_SECRET
 12. After adding these changes, make a new git repository and go through the following steps:
     git branch -M master
