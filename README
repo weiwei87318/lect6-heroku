@@ -25,7 +25,12 @@ To use this repository, you must follow these steps:
 9. If on Cloud9, preview templates/index.html. This should successfully render the HTML!
 10. Sign up for heroku at heroku.com 
 11. Install heroku by running npm install -g heroku
-12. Add your secret keys (from step 2) by going to https://dashboard.heroku.com/apps
+13. Go through the following steps:
+    heroku login -i
+    heroku create
+    git push heroku master
+14. Navigate to your newly-created heroku site!
+14.5. Add your secret keys (from tweepy.env) by going to https://dashboard.heroku.com/apps
     and clicking into your app. Click on Settings, then scroll to "Config Vars." Click
     "Reveal Config Vars" and add the key value pairs for each variable in user_tweets.py
     Your config var key names should be:
@@ -33,10 +38,6 @@ To use this repository, you must follow these steps:
     KEY_SECRET
     TOKEN
     TOKEN_SECRET
-13. After adding these changes, make a new git repository and go through the following steps:
-    git branch -M master
-    git remote add origin [.git link to your new repository]
-    git push -u origin master
-    git push heroku master
-14. Navigate to your newly-created heroku site!
-15. If this does not load correctly, you can debug by running `heroku logs --tail` in the console.
+15. Configure requirements.txt with all requirements needed to run your app.
+16. Configure Procfile with the command needed to run your app.
+17. If you are still having issues, you may use heroku logs --tail to see what's wrong.
