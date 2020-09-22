@@ -8,7 +8,7 @@ To use this repository, you must follow these steps:
 1. Navigate to https://developer.twitter.com/en/portal/projects-and-apps and make a new app.
 2. Click on the key symbol after creating your project, and it will take you to your keys and tokens.
     If needed, you can regenerate your access token and secret.
-3. Clone this repository by using git clone http://www.github.com/Sresht/lect6-heroku-complete
+3. Clone this repository by using git clone http://www.github.com/Sresht/lect6-heroku
 4. Run the following in your terminal:
     sudo pip install tweepy
     (or) sudo pip3 install tweepy
@@ -16,7 +16,8 @@ To use this repository, you must follow these steps:
     (or) pip3 install tweepy
 5. Install flask using the same process as above ([sudo] pip[3] install flask)
 6. Install python-dotenv using the same process as above ([sudo] pip[3] install python-dotenv)
-7. Add your secret keys (from step 2) by making a new root-level file called tweepy.env and populating it as follows:
+7. Add your secret keys (from step 2) by making a new root-level file called tweepy.env and populating it as follows.
+    **** MAKE SURE THE FILE AND VARIABLES ARE NAMED THE EXACT SAME WAY AS DESCRIBED!!!***
     KEY=''
     KEY_SECRET=''
     TOKEN=''
